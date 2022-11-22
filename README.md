@@ -1,5 +1,7 @@
 <div style='display: flex'>
-  <img alt='ts icon' width='50' src='https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'/>
+  <a href="https://tsed.io" target="_blank">
+    <img alt='ts icon' width='50' src='https://tsed.io/tsed-og.png'/>
+  </a>
   <span style='font-weight: bold'>&nbsp;&nbsp<strong>PROJECT TEMPLATE</strong></span>
 </div>
 <br/>

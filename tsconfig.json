@@ -23,9 +23,11 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "importHelpers": true,
+    "noUnusedParameters": false,
+    "useUnknownInCatchVariables": false,
     "paths": {
-      "@mod": ["src/mod"],
-      "@mod/*": ["src/mod/*"]
-    }
+      "@controllers": ["src/controllers"]
+    },
+    "lib": ["es7", "dom", "ESNext.AsyncIterable"]
   }
 }

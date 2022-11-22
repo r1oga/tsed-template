@@ -1,13 +1,25 @@
-import { TEST } from '@mod/file'
+import { $log } from '@tsed/common'
+import { PlatformKoa } from '@tsed/platform-koa'
 
-const A = [1, 2, 3]
+import { Server } from './Server'
 
-interface B {
-  foo: string
+async function bootstrap() {
+  try {
+    const platform = await PlatformKoa.bootstrap(Server)
+    await platform.listen()
+
+    process.on('SIGINT', () => {
+      void platform.stop()
+    })
+  } catch (error) {
+    $log.error({
+      event: 'SERVER_BOOTSTRAP_ERROR',
+      message: error.message,
+      stack: error.stack,
+    })
+  }
 }
 
-const c: B = { foo: 'bar' }
-
-console.log(A, c, TEST, 1)
-console.log(process.env.SECRET)
-console.log(process.env.FOO)
+bootstrap().catch(() => {
+  /* emtpy */
+})
