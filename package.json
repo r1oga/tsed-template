@@ -8,7 +8,7 @@
     "prepare": "husky install"
   },
   "_moduleAliases": {
-    "@mod": "dist/mod"
+    "@controllers": "dist/controllers"
   },
   "author": "r1oga",
   "license": "ISC",
@@ -30,7 +30,6 @@
     "jest-mock-extended": "^3.0.1",
     "jest-silent-reporter": "^0.5.0",
     "prettier": "^2.7.1",
-    "reflect-metadata": "^0.1.13",
     "supertest": "^6.3.1",
     "ts-jest": "^29.0.3",
     "ts-node-dev": "^2.0.0",
@@ -38,6 +37,13 @@
     "tslib": "^2.4.1"
   },
   "dependencies": {
+    "@tsed/ajv": "7.5.2",
+    "@tsed/common": "^7.5.2",
+    "@tsed/core": "^7.5.2",
+    "@tsed/di": "^7.5.2",
+    "@tsed/platform-koa": "^7.5.2",
+    "@tsed/schema": "7.5.2",
+    "ajv": "^8.11.2",
     "barrelsby": "^2.5.1",
     "module-alias": "^2.2.2",
     "nps": "^5.10.0"

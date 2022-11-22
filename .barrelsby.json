@@ -1,5 +1,5 @@
 {
-  "directory": ["src/mod"],
+  "directory": ["src/controllers"],
   "delete": true,
   "noSemicolon": true,
   "singleQuotes": true
