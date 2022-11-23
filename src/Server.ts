@@ -4,14 +4,10 @@ import { PlatformApplication } from '@tsed/common'
 import { Configuration, Inject } from '@tsed/di'
 import * as controllers from '@controllers'
 
-import { config } from './config'
-
 @Configuration({
-  ...config,
   acceptMimes: ['application/json'],
   // CHANGE
   componentsScan: false,
-  httpPort: process.env.PORT ?? 3000,
   httpsPort: false,
   mount: {
     '/': [...Object.values(controllers)],
