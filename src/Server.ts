@@ -14,11 +14,8 @@ import * as controllers from '@controllers'
   },
 })
 export class Server {
-  @Inject()
-  // @ts-expect-error
-  protected app: PlatformApplication
-
-  @Configuration()
-  // @ts-expect-error
-  protected settings: Configuration
+  constructor(
+    @Inject() protected app: PlatformApplication,
+    @Configuration() protected settings: Configuration,
+  ) {}
 }
