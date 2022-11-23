@@ -19,4 +19,6 @@ COPY scripts/secrets-entrypoint.sh /usr/local/bin/secrets-entrypoint.sh
 RUN chmod +x /usr/local/bin/secrets-entrypoint.sh
 ENTRYPOINT ["secrets-entrypoint.sh"]
 
+EXPOSE 8080
+
 CMD ["npm", "run" ,"nps", "start.prod"]
