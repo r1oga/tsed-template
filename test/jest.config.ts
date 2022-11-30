@@ -18,9 +18,8 @@ const jestConfig: JestConfigWithTsJest = {
   },
   moduleDirectories: ['node_modules', __dirname],
   moduleFileExtensions: ['ts', 'js', 'json'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/',
-  }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  modulePaths: [compilerOptions.baseUrl],
   preset: 'ts-jest',
   rootDir: '..',
   setupFilesAfterEnv: ['./test/setup.ts'],
