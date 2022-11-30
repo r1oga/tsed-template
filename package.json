@@ -39,6 +39,7 @@
   "dependencies": {
     "@tsed/ajv": "7.5.2",
     "@tsed/common": "^7.5.2",
+    "@tsed/components-scan": "^7.7.1",
     "@tsed/core": "^7.5.2",
     "@tsed/di": "^7.5.2",
     "@tsed/platform-koa": "^7.5.2",
