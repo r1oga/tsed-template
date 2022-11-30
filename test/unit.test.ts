@@ -1,6 +1,5 @@
 import { PlatformTest } from '@tsed/common'
 import SuperTest from 'supertest'
-
 import { Server } from 'src/Server'
 
 describe('HelloWorld Controller', () => {
