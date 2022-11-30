@@ -50,6 +50,7 @@ jobs:
 
       - name: Test
         run: npm run nps test.ci
+
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
