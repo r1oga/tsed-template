@@ -45,8 +45,12 @@ jobs:
       - name: Format
         run: npm run nps format.ci
 
-      - name: Test
-        run: npm run nps test.ci
-
       - name: Build
         run: npm run nps build
+
+      - name: Test
+        run: npm run nps test.ci
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
