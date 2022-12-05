@@ -37,6 +37,10 @@ scripts:
       script: nps 'lint.check --quiet'
       hiddenFromHelp: true
 
+  precommit:
+    script: tsc && nps barrels && lint-staged
+    hiddenFromHelp: true
+
   start:
     default:
       script: nps barrels start.dev
@@ -57,4 +61,12 @@ scripts:
       description: Run tests (watch)
     ci:
       script: nps 'test --silent --reporters=jest-silent-reporter'
+      hiddenFromHelp: true
+
+  validate:
+    default:
+      script: concurrently tsc 'nps test' 'nps format.check' 'nps lint.check'
+      description: Perform static analysis testing (lint, format...)
+    ci:
+      script: concurrently tsc 'nps format.ci' 'nps lint.ci' # test run by coveralls action
       hiddenFromHelp: true
